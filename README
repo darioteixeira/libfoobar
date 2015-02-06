@@ -27,7 +27,7 @@ Bar_c.ml:	Bar, Bar_a, Bar_b, Foo, Foo_c
 Note that the list above does not correspond to the dependencies computed
 with version 4.02 of OCamldep.  The script myocamldep.ml postprocesses
 OCamldep's output to bring it in line with the actual dependency graph
-(the script is called my OCamlbuild as a frontend to OCamldep).
+(the script is called by OCamlbuild as a frontend to OCamldep).
 
 
 2. External dependencies
