@@ -1,0 +1,16 @@
+OASISFormat:		0.4
+Name:			Libfoobar
+Version:		0.1
+Authors:		Dario Teixeira <dario.teixeira@nleyten.com>
+License:		ISC
+LicenseFile:		LICENSE
+Plugins:		META (0.4), DevFiles (0.4)
+BuildTools:		ocamlbuild, make
+Synopsis:
+  Dummy library to test module aliases and -no-alias-deps
+  within a project using OASIS+OCamlbuild.
+
+Library "foobar"
+  Path:			src
+  Modules:		Foo, Foo_a, Foo_b, Foo_c, Bar, Bar_a, Bar_b, Bar_c
+

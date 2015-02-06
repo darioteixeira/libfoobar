@@ -1,0 +1,58 @@
+=========================================================================
+| README for Libfoobar							|
+|									|
+| Dario Teixeira <dario.teixeira@nleyten.com>				|
+=========================================================================
+
+
+1. Overview
+===========
+
+Libfoobar is dummy library whose sole purpose is to test the combination
+of module aliases and -no-alias-deps (introduced in OCaml 4.02) within a
+project using OASIS+OCamlbuild.
+
+The actual inner dependencies of the project are as follows:
+
+Foo.ml:		(none)
+Foo_a.ml:	Foo
+Foo_b.ml:	Foo, Foo_a
+Foo_c.ml:	Foo, Foo_a, Foo_b
+
+Bar.ml:		(none)
+Bar_a.ml:	Bar, Foo, Foo_a
+Bar_b.ml:	Bar, Bar_a, Foo, Foo_b
+Bar_c.ml:	Bar, Bar_a, Bar_b, Foo, Foo_c
+
+Note that the list above does not correspond to the dependencies computed
+with version 4.02 of OCamldep.  The script myocamldep.ml postprocesses
+OCamldep's output to bring it in line with the actual dependency graph
+(the script is called my OCamlbuild as a frontend to OCamldep).
+
+
+
+2. External dependencies
+========================
+
+Libfoobar depends on Batteries [1].
+
+
+3. Building and installing
+==========================
+
+The build system relies on OASIS.  The customary sequence of './configure',
+'make', and 'make install' is used to build and install the library.
+
+
+4. License
+==========
+
+Libfoobar is distributed under the terms of the ISC license.
+See LICENSE file for full license text.
+
+
+References
+==========
+
+[1] http://batteries.forge.ocamlcore.org/
+

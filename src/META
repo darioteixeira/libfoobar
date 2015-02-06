@@ -1,0 +1,12 @@
+# OASIS_START
+# DO NOT EDIT (digest: c55273b258218a35cf998b3813a6a732)
+version = "0.1"
+description =
+"Dummy library to test module aliases and -no-alias-deps within a project using OASIS+OCamlbuild."
+archive(byte) = "foobar.cma"
+archive(byte, plugin) = "foobar.cma"
+archive(native) = "foobar.cmxa"
+archive(native, plugin) = "foobar.cmxs"
+exists_if = "foobar.cma"
+# OASIS_STOP
+
