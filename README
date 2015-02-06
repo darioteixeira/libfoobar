@@ -30,7 +30,6 @@ OCamldep's output to bring it in line with the actual dependency graph
 (the script is called my OCamlbuild as a frontend to OCamldep).
 
 
-
 2. External dependencies
 ========================
 
