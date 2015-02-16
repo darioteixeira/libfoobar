@@ -624,6 +624,7 @@ let my_dispatcher = function
 	| After_options ->
   		Options.ocamldep := S [Sh ("ocaml myocamldep.ml")]
 	| After_rules ->
+		flag ["ocamldep"; "no_alias_deps"] (S [A "-paths"]);
 		dep [] ["myocamldep.ml"]
 	| _ -> ()
 
