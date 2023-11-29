@@ -6685,7 +6685,7 @@ let setup_t =
           license_file = Some "LICENSE";
           copyrights = [];
           maintainers = [];
-          authors = ["Dario Teixeira <dario.teixeira@nleyten.com>"];
+          authors = ["Dario Teixeira <dario.teixeira@yahoo.com>"];
           homepage = None;
           synopsis =
             "Dummy library to test module aliases and -no-alias-deps\nwithin a project using OASIS+OCamlbuild.";
